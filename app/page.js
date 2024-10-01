@@ -1,9 +1,12 @@
-import Image from "next/image";
-
+import Banner from "./components/banner/banner";
+import Header from "./components/header/header";
+import Product from "./components/products/product";
 export default function Home() {
   return (
     <div>
-      <h1></h1>
+      <Header />
+      <Banner />
+      <Product />
     </div>
   );
 }
