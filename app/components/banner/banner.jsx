@@ -4,17 +4,7 @@ import Image from "next/image";
 function Banner() {
   return (
     <div className="bg-[#eddfdf] h-screen px-[80px]">
-      <div className="flex gap-[12px] justify-end">
-        <div className="flex border border-[#992b1c] px-[15px] py-[7px] rounded-xl gap-1">
-          <Image src="/images/client.svg" width={20} height={20} />
-          <p className="text-black text-[17px]">Vendor</p>
-        </div>
-        <div className="flex border border-[#992b1c] px-[15px] py-[7px] rounded-xl gap-1">
-          <Image src="/images/client.svg" width={20} height={20} />
-          <p className="text-black text-[17px]">Client</p>
-        </div>
-      </div>
-      <div className="flex items-center pt-[185px]">
+      <div className="flex items-center pt-[100px]">
         <div className="w-1/2">
           <div className="ml-48">
             <p className="text-[55px] text-black font-bold leading-none">

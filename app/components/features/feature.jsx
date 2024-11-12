@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Feature() {
   return (
-    <div className="pb-[250px]">
+    <div className="pb-[50px]">
       <div className="flex justify-center py-5">
         <h3 className="text-black text-[35px]">Features</h3>
       </div>
