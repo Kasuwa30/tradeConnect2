@@ -21,7 +21,9 @@ export default function Header() {
             </Link>
           </div>
           <div className="flex px-[20px] py-[4px] rounded-xl bg-[#992b1c] gap-[10px] justify-center">
-            <p className="text-white text-[20px]">Sign up</p>
+            <Link href="/auth/sign-up">
+              <p className="text-white text-[20px]">Sign up</p>
+            </Link>
           </div>
         </div>
       </div>

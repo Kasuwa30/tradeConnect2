@@ -1,10 +1,9 @@
 import AuthLayout from "../../../components/layout/AuthLayout";
-import LoginPage from "../loginPage/LoginPage";
-
+import CreatePassword from "../_components/createpasswordPage";
 function Page() {
   return (
     <AuthLayout>
-      <LoginPage />
+      <CreatePassword />
     </AuthLayout>
   );
 }
