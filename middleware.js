@@ -11,11 +11,6 @@ export function middleware(req) {
     return NextResponse.redirect(url);
   }
 
-  // // Allow access to `/login` without authentication
-  // if (url.pathname.startsWith("/login")) {
-  //   return NextResponse.next();
-  // }
-
   // Redirect unauthenticated users accessing `/dashboard` to `/login`
   if (!isAuthenticated && url.pathname.startsWith("/dashboard")) {
     url.pathname = "/auth/login";
