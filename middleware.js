@@ -22,5 +22,5 @@ export function middleware(req) {
 
 // Define protected paths
 export const config = {
-  matcher: ["/", "/dashboard"], ///dashboard/:path* // TODO: Fix the issue with protected route and dashboard sidebar
+  matcher: ["/", "/dashboard"], ///dashboard/:path*
 };
