@@ -1,4 +1,3 @@
-// app/login/page.js
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -16,10 +15,9 @@ export default function LoginPage() {
       // Set the auth cookie for one day
       nookies.set(null, "auth", "true", {
         maxAge: 24 * 60 * 60,
-        path: "/",
+        path: "/home",
       });
-      //localStorage.setItem("auth", "true");
-      router.push("/dashboard");
+      router.push("/dashboard/home");
     } else {
       alert("Invalid credentials");
     }

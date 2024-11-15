@@ -7,7 +7,7 @@ export default function LogoutButton() {
 
   const handleLogout = () => {
     nookies.destroy(null, "auth", { path: "/" });
-    router.push("/");
+    router.push("/home");
   };
 
   return (

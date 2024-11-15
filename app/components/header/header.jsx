@@ -16,7 +16,7 @@ export default function Header() {
 
         <div className="flex items-center gap-10">
           <div className="border px-[20px] py-[4px] rounded-xl border-[#13121280]">
-            <Link href="/login">
+            <Link href="/auth/login">
               <p className="text-black text-[20px]">Login</p>
             </Link>
           </div>
