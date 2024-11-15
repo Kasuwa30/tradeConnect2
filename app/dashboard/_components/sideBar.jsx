@@ -14,15 +14,19 @@ const SideBar = () => {
         <nav className="flex flex-col p-4">
           {navigations.map((dashboardNavigation, key) => {
             const isActive = pathname === dashboardNavigation.to || pathname.includes(dashboardNavigation.to);
+            const isSecondToLast = key === navigations.length - 2; // Check if the item is second-to-last
+
             return (
               <div key={key}>
                 <div className={`${isActive ? "bg-[#992B1C]" : ""} rounded-md`}>
                   <Link href={dashboardNavigation.to} key={dashboardNavigation.name}>
                     <span className={`flex px-3 gap-3 py-2 rounded-md mx-4 my-2 ${isActive ? "bg-utilityBrand" : ""}`}>
                       <Image src={dashboardNavigation.activeIcon} width={24} height={24} />
+
                       <p className={isActive ? "text-white" : "text-black"}>{dashboardNavigation.name}</p>
                     </span>
                   </Link>
+                  {isSecondToLast && <div className="border-b border-[#8E8E8E]" />}
                 </div>
               </div>
             );

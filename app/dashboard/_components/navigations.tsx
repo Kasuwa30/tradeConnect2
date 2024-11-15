@@ -16,25 +16,25 @@ const navigations = [
   {
     component: Link,
     name: "Messages",
-    to: "/dashboard/settings",
+    to: "/dashboard/messages",
     activeIcon: "/images/directbox-notif.svg",
   },
   {
     component: Link,
     name: "Subscription",
-    to: "/dashboard/settings",
+    to: "/dashboard/subscription",
     activeIcon: "/images/wallet-money.svg",
   },
   {
     component: Link,
     name: "Transactions",
-    to: "/dashboard/settings",
+    to: "/dashboard/transactions",
     activeIcon: "/images/gift.svg",
   },
   {
     component: Link,
     name: "Notification",
-    to: "/dashboard/settings",
+    to: "/dashboard/notifications",
     activeIcon: "/images/notification.svg",
   },
   {
