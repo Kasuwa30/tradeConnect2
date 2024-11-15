@@ -1,18 +1,38 @@
+"use client";
 import Link from "next/link";
 import LogoutButton from "../../../app/commonComponents/button/logout";
+import Image from "next/image";
+import navigations from "./navigations";
+import { usePathname } from "next/navigation";
+
 const SideBar = () => {
+  const pathname = usePathname();
   return (
-    <aside className="w-64 bg-blue-800 text-white flex flex-col">
-      <h2 className="text-xl font-bold p-4">Dashboard</h2>
-      <nav className="flex flex-col p-4">
-        <Link href="/dashboard/home">Home</Link>
-        <Link href="/dashboard/settings">Settings</Link>
-        <Link href="/dashboard/profile">Profile</Link>
-      </nav>
-      <div className="p-4">
-        <LogoutButton />
-      </div>
-    </aside>
+    <div className="border m-3 border-[#EBEBEB] rounded-[10px] h-full">
+      <aside className=" flex flex-col">
+        <Image src="/images/trade_connect.svg" width={95} height={90} className="self-center py-5" />
+        <nav className="flex flex-col p-4">
+          {navigations.map((dashboardNavigation, key) => {
+            const isActive = pathname === dashboardNavigation.to || pathname.includes(dashboardNavigation.to);
+            return (
+              <div key={key}>
+                <div className={`${isActive ? "bg-[#992B1C]" : ""} rounded-md`}>
+                  <Link href={dashboardNavigation.to} key={dashboardNavigation.name}>
+                    <span className={`flex px-3 gap-3 py-2 rounded-md mx-4 my-2 ${isActive ? "bg-utilityBrand" : ""}`}>
+                      <Image src={dashboardNavigation.activeIcon} width={24} height={24} />
+                      <p className={isActive ? "text-white" : "text-black"}>{dashboardNavigation.name}</p>
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
+        </nav>
+        <div>
+          <LogoutButton />
+        </div>
+      </aside>
+    </div>
   );
 };
 

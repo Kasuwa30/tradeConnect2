@@ -1,11 +1,10 @@
+import Image from "next/image";
 const Header = () => {
   return (
-    <header className="flex justify-between items-center p-4 bg-white shadow">
-      <h1 className="text-xl">Welcome</h1>
+    <header className="flex justify-between items-center p-4 bg-white ">
+      <h1 className="text-xl text-black">Welcome Jane 👋🏽</h1>
       <div className="flex gap-4">
-        <button className="py-2 px-4 bg-blue-500 text-white rounded">Button 1</button>
-        <button className="py-2 px-4 bg-blue-500 text-white rounded">Button 2</button>
-        <button className="py-2 px-4 bg-blue-500 text-white rounded">Button 3</button>
+        <Image src="/images/header-icons.svg" alt="header-icons" width={400} height={400} />
       </div>
     </header>
   );

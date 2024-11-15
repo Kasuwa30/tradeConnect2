@@ -1,5 +1,6 @@
 import DashboardLayout from "../../../components/layout/DashboardLayout";
 import Image from "next/image";
+
 function Page() {
   return (
     <DashboardLayout>
