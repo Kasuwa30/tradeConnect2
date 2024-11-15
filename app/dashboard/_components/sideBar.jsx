@@ -14,7 +14,7 @@ const SideBar = () => {
         <nav className="flex flex-col p-4">
           {navigations.map((dashboardNavigation, key) => {
             const isActive = pathname === dashboardNavigation.to || pathname.includes(dashboardNavigation.to);
-            const isSecondToLast = key === navigations.length - 2; // Check if the item is second-to-last
+            const isSecondToLast = key === navigations.length - 2;
 
             return (
               <div key={key}>
@@ -26,13 +26,13 @@ const SideBar = () => {
                       <p className={isActive ? "text-white" : "text-black"}>{dashboardNavigation.name}</p>
                     </span>
                   </Link>
-                  {isSecondToLast && <div className="border-b border-[#8E8E8E]" />}
                 </div>
+                {isSecondToLast && <div className="border-b border-[#8E8E8E]" />}
               </div>
             );
           })}
         </nav>
-        <div>
+        <div className="pt-44">
           <LogoutButton />
         </div>
       </aside>
