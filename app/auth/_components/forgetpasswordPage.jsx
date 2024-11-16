@@ -41,7 +41,7 @@ const ForgotPassword = () => {
           </div>
 
           <Link href="/auth/sendemail">
-            <button type="submit" className="w-full py-3 bg-red-800 text-white rounded hover:scale-105 transform transition-all">
+            <button type="submit" className="w-full py-3 bg-red-800 text-white rounded hover:bg-red-700 transform transition-all">
               Send recovery instructions
             </button>
           </Link>

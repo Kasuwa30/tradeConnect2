@@ -18,7 +18,7 @@ const SideBar = () => {
 
             return (
               <div key={key}>
-                <div className={`${isActive ? "bg-[#992B1C]" : ""} rounded-md`}>
+                <div className={`${isActive ? "bg-[#992B1C] hover:bg-red-700" : ""} rounded-md`}>
                   <Link href={dashboardNavigation.to} key={dashboardNavigation.name}>
                     <span className={`flex px-3 gap-3 py-2 rounded-md mx-4 my-2 ${isActive ? "bg-utilityBrand" : ""}`}>
                       <Image src={dashboardNavigation.activeIcon} width={24} height={24} />

@@ -4,7 +4,6 @@ export function middleware(req) {
   const authCookie = req.cookies.get("auth");
   const isAuthenticated = authCookie?.value === "true"; // Simplified check
   const url = req.nextUrl.clone();
-  console.log("url", url, "isAuthenticated", isAuthenticated);
   // Redirect from root `/` to `/home`
   if (url.pathname === "/") {
     url.pathname = "/home";

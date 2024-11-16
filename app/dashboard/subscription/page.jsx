@@ -71,13 +71,17 @@ function Page() {
         <div className="flex gap-4 mb-6 my-7">
           <button
             onClick={() => setSelectedType("monthly")}
-            className={`p-2 ${selectedType === "monthly" ? "bg-[#992B1C] text-white" : "bg-gray-200 text-black"} rounded-md `}
+            className={`p-2 ${
+              selectedType === "monthly" ? "bg-[#992B1C] text-white hover:bg-red-700" : "bg-gray-200 text-black"
+            } rounded-md `}
           >
             Monthly
           </button>
           <button
             onClick={() => setSelectedType("annually")}
-            className={`p-2 ${selectedType === "annually" ? "bg-[#992B1C] text-white" : "bg-gray-200 text-black"} rounded-md `}
+            className={`p-2 ${
+              selectedType === "annually" ? "bg-[#992B1C] text-white hover:bg-red-700" : "bg-gray-200 text-black"
+            } rounded-md `}
           >
             Annually
           </button>
@@ -114,8 +118,10 @@ function Page() {
               </div>
 
               {/* Get Started Button */}
-              <div className="flex bg-[#992B1C] p-3 rounded-md mt-4 cursor-pointer w-max">
-                <p className="text-white text-center w-full">Get Started</p>
+              <div className="flex bg-[#992B1C] p-3 rounded-md mt-4 cursor-pointer w-max hover:bg-red-700">
+                <button onClick={() => alert(`Subscription successful on ${option.title}`)}>
+                  <p className="text-white text-center w-full">Get Started</p>
+                </button>
               </div>
             </div>
           ))}

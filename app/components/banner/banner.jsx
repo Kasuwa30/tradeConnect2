@@ -3,11 +3,12 @@ import Image from "next/image";
 
 function Banner() {
   return (
-    <div className="bg-[#eddfdf] h-screen px-[80px]">
-      <div className="flex items-center pt-[100px]">
-        <div className="w-1/2">
-          <div className="ml-48">
-            <p className="text-[55px] text-black font-bold leading-none">
+    <div className="bg-[#eddfdf] min-h-screen px-6 md:px-[80px]">
+      <div className="flex flex-col md:flex-row items-center pt-16 md:pt-[100px]">
+        {/* Left Content */}
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <div className="md:ml-12 lg:ml-20">
+            <p className="text-[30px] md:text-[40px] lg:text-[55px] text-black font-bold leading-tight">
               Connecting
               <br />
               Vendors for <br />
@@ -15,20 +16,30 @@ function Banner() {
               Collaboration
             </p>
           </div>
-          <div className="ml-48 py-[30px]">
-            <p className="text-black text-[20px]">
-              At Teams, we bring together the best of the <br />
-              best in the industry <br />
-              to give your event the most quality hands <br /> ever.
+          <div className="mt-6 md:ml-12 lg:ml-20">
+            <p className="text-black text-[16px] md:text-[20px]">
+              At Teams, we bring together the best of the
+              <br />
+              best in the industry
+              <br />
+              to give your event the most quality hands
+              <br />
+              ever.
             </p>
           </div>
         </div>
-        <div className="w-1/2">
-          <Image src="/images/banner-girl.svg" width={526} height={508} />
+
+        {/* Right Content */}
+        <div className="w-full md:w-1/2 mt-8 md:mt-0">
+          <Image src="/images/banner-girl.svg" width={526} height={508} alt="Banner Girl" className="mx-auto md:mx-0" />
         </div>
       </div>
-      <div className="flex px-[20px] py-[10px] ml-48 rounded-xl bg-[#992b1c] gap-[10px] justify-center w-[227px]">
-        <p className="text-white text-[20px]">Get Started</p>
+
+      {/* Get Started Button */}
+      <div className="flex justify-center md:justify-start mt-8 md:ml-12 lg:ml-20">
+        <div className="px-6 py-3 rounded-xl bg-[#992b1c]">
+          <p className="text-white text-[16px] md:text-[20px]">Get Started</p>
+        </div>
       </div>
     </div>
   );

@@ -67,7 +67,7 @@ export default function SignUpPage() {
           </div>
 
           {/* Next Button */}
-          <button className="w-full bg-red-800 text-white p-2 rounded mt-4">
+          <button className="w-full bg-red-800 text-white p-2 rounded mt-4 hover:bg-red-700">
             <Link href="/auth/createpassword">Next</Link>
           </button>
 
