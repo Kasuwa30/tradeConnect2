@@ -25,13 +25,9 @@ export default function SignUpPage() {
         <div className="space-y-4 w-full lg:w-3/5  lg:p-10 rounded-lg">
           {/* Logo Above the Sign-Up Form */}
           <div className="text-center mb-6">
-            <Image
-              src="/images/trade_connect.svg" // Update with actual logo path
-              alt="Logo"
-              height={100}
-              width={100}
-              className="mx-auto"
-            />
+            <Link href="/">
+              <Image src="/images/trade_connect.svg" alt="Logo" height={100} width={100} className="mx-auto" />
+            </Link>
           </div>
 
           <h2 className="text-3xl lg:text-4xl font-bold text-start">Sign Up</h2>

@@ -19,7 +19,9 @@ const ForgotPassword = () => {
       {/* Right Side with Form */}
       <div className="w-1/2 flex flex-col justify-center items-center animate-slideIn px-6">
         {/* Logo at the Top */}
-        <Image src="/images/trade_connect.svg" alt="Logo" width={80} height={80} className="w-20 lg:w-24 mb-8" />
+        <Link href="/">
+          <Image src="/images/trade_connect.svg" alt="Logo" width={80} height={80} className="w-20 lg:w-24 mb-8" />
+        </Link>
 
         <form className="shadow-lg bg-white rounded-lg p-8 w-full max-w-md">
           <h1 className="text-3xl text-center mb-6 font-semibold text-gray-800 animate-fadeIn">Forgot Password?</h1>

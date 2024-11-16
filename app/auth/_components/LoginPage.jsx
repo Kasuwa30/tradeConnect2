@@ -46,7 +46,9 @@ export default function LoginPage() {
       <div className="w-full lg:w-1/2 flex flex-col items-center justify-center relative">
         {/* Logo above the form */}
         <div className="w-full flex justify-center mb-6">
-          <Image src="/images/trade_connect.svg" alt="Logo" width={100} height={100} className="w-20 lg:w-24" />
+          <Link href="/">
+            <Image src="/images/trade_connect.svg" alt="Logo" width={100} height={100} className="w-20 lg:w-24" />
+          </Link>
         </div>
 
         {/* Login Form */}

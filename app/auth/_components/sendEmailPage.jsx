@@ -19,7 +19,9 @@ const SendEmail = () => {
       {/* Right Side with Form */}
       <div className="w-1/2 flex flex-col justify-center items-center px-6">
         {/* Logo */}
-        <Image src="/images/trade_connect.svg" alt="Logo" width={80} height={80} className="w-20 lg:w-24 mb-8" />
+        <Link href="/">
+          <Image src="/images/trade_connect.svg" alt="Logo" width={80} height={80} className="w-20 lg:w-24 mb-8" />
+        </Link>
 
         <div className="shadow-lg bg-white rounded-lg p-8 w-full max-w-md animate-fadeIn">
           <div className="flex flex-col items-center mb-6">

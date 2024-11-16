@@ -3,12 +3,14 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 function ResetPassword() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+  const router = useRouter();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -33,8 +35,7 @@ function ResetPassword() {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      console.log("Form submitted");
-      // Add your form submission logic here
+      router.push("/auth/login");
     }
   };
 
@@ -48,7 +49,9 @@ function ResetPassword() {
       {/* Right Section: Form */}
       <div className="bg-white w-full lg:w-1/2 max-w-md mx-auto shadow-lg rounded-lg p-8 animate-fadeIn">
         <div className="text-center">
-          <Image src="/images/trade_connect.svg" alt="Logo" width={100} height={100} className="mx-auto mb-6" />
+          <Link href="/">
+            <Image src="/images/trade_connect.svg" alt="Logo" width={100} height={100} className="mx-auto mb-6" />
+          </Link>
           <h2 className="text-2xl font-semibold mb-2">Reset Password</h2>
           <p className="text-gray-600">Your new password must be at least 8 characters long.</p>
         </div>
